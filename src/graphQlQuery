@@ -1,0 +1,116 @@
+
+query {
+  restaurants(restaurantIds: [215506,174622,252232,162397,45916,3467,108796,3494,11065,24451,185773,214570,193603,251101,158713,53791,7936,50962,20233,47614,986152,1676,36082,192610,193747,1779,255298,4329,160675,161113,889,7761,17035,183,160438,5881,43240,4374,1906]) {
+    restaurantId,
+    name,
+    description,
+    country{
+      name
+    }
+    diningStyle,
+    hoursOfOperation,
+    executiveChef,
+    privateDining {
+      description,
+      formattedPhone
+      contact,
+      hasPrivateDining,
+      email
+    }
+    primaryCuisine {
+      name
+    },
+    cuisines {
+      name
+    },
+    dressCode
+    entertainment
+    metro {
+      name,
+      displayName,
+      urls {
+        startPageUrl
+      }
+      statistics {
+        restaurantCount
+      }
+    }
+    priceBand {
+      name
+    }
+    paymentOptions,
+    address {
+      line1,
+      line2,
+      city,
+      state,
+      postCode,
+      country
+    },
+    neighborhood {
+      name
+    },
+    parkingDetails,
+    publicTransit,
+    urls {
+     profileUrl
+    }
+    
+    statistics {
+      reviews {
+        ratings {
+          ambience {
+            rating,
+            count
+          },
+          food {
+            rating,
+            count
+          },
+          value {
+            rating,
+            count
+          },
+          overall {
+            rating,
+            count
+          },
+          service {
+            rating,
+            count
+          },
+          noise {
+            rating,
+            count
+          }
+        }
+      }
+    }
+    
+    macro {
+      name
+    }
+    neighborhood {
+      name
+    },
+    photos {
+      profile {
+        original { url },
+        small { url },
+        medium { url },
+        large { url },
+        huge { url },
+        wideSmall { url },
+        wideMedium { url },
+        wideLarge { url },
+        wideHuge { url }
+      }
+    },
+    contactInformation {
+      phoneNumber
+      formattedPhoneNumber
+      automatedPhoneNumber
+      formattedAutomatedPhoneNumber
+    }
+  }
+}

@@ -1,0 +1,49 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3430885, 2017-08-01T16:40:29-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: BrandonTextWeb-Regular by HVD Fonts
+ * URL: https://www.myfonts.com/fonts/hvdfonts/brandon-text/regular/
+ * Copyright: Copyright (c) 2015 by Hannes von Doehren. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3430885
+ * 
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+  
+@font-face {
+	font-family: 'BrandonText';
+	src: url('webfonts/3459E5_0_0.eot');
+	src: url('webfonts/3459E5_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3459E5_0_0.woff2') format('woff2'),url('webfonts/3459E5_0_0.woff') format('woff'),url('webfonts/3459E5_0_0.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'BrandonText';
+    src: url('webfonts/Brandon_txt_med-webfont.woff2') format('woff2'),
+         url('webfonts/Brandon_txt_med-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BrandonText';
+    src: url('webfonts/Brandon_txt_bld-webfont.woff2') format('woff2'),
+         url('webfonts/Brandon_txt_bld-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}

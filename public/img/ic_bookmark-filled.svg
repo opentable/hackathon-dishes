@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/ic_bookmarked</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon/ic_bookmarked" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/ic_bookmark" transform="translate(5.000000, 3.000000)" fill="#DA3743">
+            <path d="M2,-0.000121269196 L12,-0.000121269196 C13.1045695,-0.000121269196 14,0.895309231 14,1.99987873 L14,17.6055572 C14,17.8816996 13.7761424,18.1055572 13.5,18.1055572 C13.421402,18.1055572 13.343911,18.0870278 13.273815,18.0514724 L7,14.8691561 L0.726185039,18.0514724 C0.479912898,18.1763909 0.17900339,18.0780144 0.054084842,17.8317423 C0.0185294562,17.7616462 2.78518304e-15,17.6841552 2.77555756e-15,17.6055572 L0,1.99987873 C-6.25798147e-16,0.895309231 0.8954305,-0.000121269196 2,-0.000121269196 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

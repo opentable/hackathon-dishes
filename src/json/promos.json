@@ -1,0 +1,23 @@
+[ 
+  {
+    "name": "San Francisco Mother's Day Brunch, Lunch & Dinner Specials",
+    "dates": "Sunday, May 13, 2018",
+    "description": "Let us help you make this Mother's Day special with delicious specials to celebrate the ladies we love. From complimentary mimosas to prix-fixe menus for brunch, lunch or dinner, read on to find the perfect place to celebrate the mom in your life." ,
+    "imgUrl": "https://www.opentable.com/img/promo/Redesign_MDay18-3_Header.jpg",
+    "url": "https://www.opentable.com/promo.aspx?m=4&ref=364&pid=77"
+  },
+  {
+    "name": "San Francisco Father's Day Brunch, Lunch or Dinner Restaurants",
+    "dates": "Sunday, June 17, 2018",
+    "description": "From bottomless beers to brunch or dinner menus, read on to find a place to celebrate the dad in your life." ,
+    "imgUrl": "https://www.opentable.com/img/promo/Redesign_FathersDay2017.jpg",
+    "url": "https://www.opentable.com/promo.aspx?m=4&ref=410&pid=85"
+  },
+  {
+    "name": "Black Truffle Festival Bay Area",
+    "dates": "June 15 - 24, 2018",
+    "description": "Urbani Truffles and Grana Padano PDO cheese are proud to partner to present the Black Truffle Festival. This unique festival will showcase Urbani best traditional black truffles and Italian Grana Padano PDO cheese." ,
+    "imgUrl": "https://www.opentable.com/img/startpagepromo/Carousel_BTF18.jpeg",
+    "url": "https://www.opentable.com/promo.aspx?m=4&ref=17917&pid=11269"
+  }
+]

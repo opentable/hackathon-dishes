@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/ic_search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon/ic_search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-path" x="0" y="0" width="24" height="24"></rect>
+        <rect id="Rectangle-path" fill="#333333" fill-rule="nonzero" transform="translate(16.242801, 16.242309) rotate(-45.000000) translate(-16.242801, -16.242309) " x="15.2428009" y="12.2423089" width="2" height="8" rx="0.5"></rect>
+        <rect id="Rectangle-path" stroke="#333333" stroke-width="2" transform="translate(9.878840, 9.878348) rotate(-45.000000) translate(-9.878840, -9.878348) " x="3.8788399" y="3.8783479" width="12" height="12" rx="6"></rect>
+    </g>
+</svg>

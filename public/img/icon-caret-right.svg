@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="caret_right_24px" transform="translate(-4.000000, -4.000000)">
+            <g id="lightning_bolt_24px">
+                <g id="Group" transform="translate(4.000000, 4.000000)">
+                    <rect id="Rectangle" fill="#FA3C32" x="0" y="0" width="16" height="16" rx="2"></rect>
+                    <polygon id="Chevron-Copy-6" fill="#FFFFFF" points="11.5 8.10508305 6.74526844 12.5935974 5.64522982 11.509572 9.2995365 8.05950512 5.5 4.70059413 6.67265353 3.59359741"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

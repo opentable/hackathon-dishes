@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="32px" viewBox="0 0 48 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>_15._Mail</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="IOS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="48px-scale" transform="translate(-432.000000, -248.000000)" fill="#DA3743">
+            <g id="email_48px" transform="translate(432.000000, 248.000000)">
+                <g id="Mail">
+                    <path d="M46,32 L2,32 C0.8954305,32 0,31.1045695 0,30 L0,2 C0,0.8954305 0.8954305,0 2,0 L46,0 C47.1045695,0 48,0.8954305 48,2 L48,30 C48,31.1045695 47.1045695,32 46,32 L46,32 Z M46,29.8 L45.8,30 L46,30 L46,29.8 L46,29.8 Z M44.586,30 L31.673,17.09 L25.414,23.04 C24.6330003,23.8207639 23.3669997,23.8207639 22.586,23.04 L16.328,17.09 L3.414,30 L44.586,30 L44.586,30 Z M2,30 L2.2,30 L2,29.8 L2,30 L2,30 Z M2,28.59 L14.878,15.71 L2,3.45 L2,28.59 L2,28.59 Z M3.44,2 L24,21.63 L44.56,2 L3.44,2 L3.44,2 Z M33.122,15.71 L46,28.59 L46,3.45 L33.122,15.71 Z" id="_15._Mail"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

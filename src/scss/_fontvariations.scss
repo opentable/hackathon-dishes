@@ -1,0 +1,133 @@
+//brandon grotesque + brandon text
+body.font1 {
+  @include font-brandontext(normal);
+
+  h2.tagline {
+    font-weight: normal;
+  }
+  
+  select {
+    @include font-brandontext(normal);
+  }
+}
+
+//brandon text + system
+body.font2 {
+  @include font-system;
+
+  h1, h2, h5, .SubContainer__heading, .TimeslotSection__Header, .MenuCategoryRow span, .MenuItem__name, .Rating--overall {
+    @include font-brandontext(500);
+  }
+
+  h2, .SubContainer__heading {
+    font-size: 1.4rem;
+  }
+
+  h1#nav-about {
+    padding: $spacing-small 0 0;
+  }
+
+  .navItem {
+    letter-spacing: 1.2px;
+  }
+}
+
+//brandon grotesque + system 
+body.font3 {
+  @include font-system;
+
+  h2.tagline {
+    font-weight: normal;
+  }
+  h2 {
+    font-weight: bold;
+  }
+  .Rating--overall, h5, .ComboItem__heading {
+    @include font-brandontext(500);
+  }
+  .LabelWithIcon__text {
+    @include font-system;
+  }
+  .LabelWithIcon--TwoLines__text {
+    font-size: $font-size-small;
+  }
+}
+
+//all system
+body.font4 {
+  @include font-system;
+
+  h1, h2, h5, .SubContainer__heading, .TimeslotSection__Header, .MenuCategoryRow span, .MenuItem__name, .Rating--overall {
+    @include font-system;
+  }
+
+  select {
+    @include font-system;
+  }
+  .tagline {
+    font-weight: normal;
+  }
+  h2, .SubContainer__heading {
+    font-size: 1.4rem;
+  }
+
+  .SubContainer__heading {
+    font-weight: 600;
+  }
+
+  h1#nav-about {
+    padding: $spacing-small 0 0;
+    line-height: 1.5;
+    font-weight: 600;
+    font-size: 3.5rem;
+  }
+
+  .navItem {
+    letter-spacing: 1.2px;
+  }
+}
+
+//brandon text + brandon text
+body.font5 {
+  @include font-brandontext(normal);
+  h1, h2, h5, .SubContainer__heading, .MenuCategoryRow span {
+    @include font-brandontext(bold);
+  }
+  .TimeslotSection__Header, .LabelWithIcon--TwoLines__text, .MenuItem__name, .Rating--overall, .ComboItem__heading, .reviews .review .review-user {
+    @include font-brandontext(500);
+  }
+  h1#nav-about {
+    padding: $spacing-small 0 0;
+  }
+  #MainContainer__content .tagline {
+    font-weight: normal;
+  }
+}
+
+//brandon grotesque + tisa
+body.font6 {
+  @include font-tisa(normal);
+  .MenuCategoryRow span, .MenuItem__name {
+    @include font-tisa(normal);
+  }
+  h2.tagline {
+    font-weight: normal;
+  }
+  select, .Tag, .Timeslot, .navItem, label {
+    @include font-system;
+  }
+}
+
+//brandon grotesque + arial
+body.font7 {
+  font-family: "Arial";
+  .MenuCategoryRow span, .MenuItem__name {
+    font-family: "Arial";
+  }
+  h2.tagline {
+    font-weight: normal;
+  }
+  select, .Tag, .Timeslot, .navItem, label {
+    font-family: "Arial";
+  }
+}

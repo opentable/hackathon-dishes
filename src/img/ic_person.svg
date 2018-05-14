@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/ic_clock copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon/ic_clock-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="boundry" x="0" y="0" width="24" height="24"></rect>
+        <path d="M19.5706915,18.7394445 C18.523244,14.8582506 16.0749374,13 12,13 C7.92505898,13 5.47675141,14.8582539 4.42930795,18.7394464 C4.28541217,19.2726568 4.60100876,19.8215602 5.13421232,19.9654594 C5.21916514,19.9883862 5.30677241,20 5.39476449,20 L18.6052337,19.999999 C19.1575179,19.999999 19.6052327,19.5522842 19.6052327,19 C19.6052327,18.9120067 19.5936187,18.8243984 19.5706915,18.7394445 Z" id="Oval" stroke="#333333" stroke-width="2"></path>
+        <rect id="Rectangle-path" stroke="#333333" stroke-width="2" x="8" y="4" width="8" height="8" rx="4"></rect>
+    </g>
+</svg>

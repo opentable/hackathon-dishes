@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_up</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Cross-Platform--DTP-rd2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPad-Copy-9" transform="translate(-651.000000, -14.000000)">
+            <g id="Group-39">
+                <g id="Icon/Edit" transform="translate(648.000000, 12.000000)">
+                    <rect id="boundry" x="0" y="0" width="24" height="24"></rect>
+                    <g id="Group-38" stroke-width="1" fill-rule="evenodd">
+                        <rect id="boundry" x="0" y="0" width="24" height="24"></rect>
+                        <path d="M5,4 C4.44771525,4 4,4.44771525 4,5 L4,19 C4,19.5522847 4.44771525,20 5,20 L19,20 C19.5522847,20 20,19.5522847 20,19 L20,5 C20,4.44771525 19.5522847,4 19,4 L5,4 Z" id="Rectangle-14" stroke="#333333" stroke-width="2"></path>
+                        <rect id="Rectangle-5" fill="#FFFFFF" x="10" y="3" width="12" height="12"></rect>
+                        <g id="Group-37" transform="translate(14.060660, 9.939340) rotate(45.000000) translate(-14.060660, -9.939340) translate(12.060660, 1.439340)" fill="#333333">
+                            <polygon id="Rectangle-15" points="1.11022302e-16 3.58578644 4 3.58578644 4 13.5857864 2 16.5857864 1.11022302e-16 13.5857864"></polygon>
+                            <rect id="Rectangle-43" x="1.11022302e-16" y="0.585786438" width="4" height="2"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
