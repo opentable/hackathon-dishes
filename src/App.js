@@ -23,7 +23,7 @@ class App extends Component {
 			<Container>
 				<QuickSearch />
 {/*				<TileSection tiles={occasions} heading="Find the perfect restaurant for you" />*/}
-				<GridSection gridItems={dishes} heading="Find the perfect restaurant for you" />
+				<GridSection gridItems={dishes} heading="Best things to eat in San Francisco" />
 				<RestCarousel restaurants={restaurants.slice(0,4)} headerText="Popular right now in San Francisco" buttons={["Now","Lunch","Dinner"]} />
 				<CuisineSelector restaurants={restaurants} cuisines={cuisines} />
 				<PromoSection promos={promos} headerText="Upcoming in San Francisco" />

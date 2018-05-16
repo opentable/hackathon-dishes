@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { LabelWithIcon } from './LabelWithIcon';
 
 export class GridItem extends Component {
 	constructor(props){
@@ -6,12 +7,22 @@ export class GridItem extends Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 	handleClick() {
-		window.open(`/features?name=${this.props.name}`);
+		window.open(`/features?name=${this.props.gridItem.name}`);
 	}
 	render() {
 		return (
-			<div className="gridItem" onClick={this.handleClick}>
-				{ this.props.name }
+			<div className="gridItem" onClick={this.handleClick} style={{backgroundImage: 'url('+this.props.gridItem.image+')'}}>
+				<div className="gridItem__overlay"></div>
+				<div className="gridItem__info">
+					<div style={{fontWeight:"bold"}}>
+						{ this.props.gridItem.name }
+					</div>
+					<LabelWithIcon
+                        text = {`${this.props.gridItem.mentions} mentions`}
+                        img = "/img/ic_review_white.svg"
+                        imgAlt = "mentions"
+                    />
+				</div>
 			</div>
 		);
 	}

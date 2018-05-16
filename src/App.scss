@@ -1456,6 +1456,27 @@ select {
   width: 100%;
   margin-bottom: $spacing;
   cursor: pointer;
+  background-size: cover;
+  position: relative;
+
+  .gridItem__info {
+    position: absolute;
+    left: $spacing;
+    bottom: .75rem;
+    color: white;
+    font-weight: $font-weight-medium;
+    @include font-size-large;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  }
+
+  .gridItem__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.6) 15%,rgba(0,0,0,0) 60%);
+  }
 
   &:hover {
     background-color: darken($color-bg, 10%);
@@ -1464,6 +1485,7 @@ select {
 
 .Grid {
   justify-content: space-between;
+  padding-top: $spacing-small;
   .gridItems__col1 {
    flex-basis: ($card-width * 2) + 16px;
     .gridItem {
@@ -1488,6 +1510,26 @@ select {
 
 /* UP TO TABLET */
 @media (max-width: $breakpoint-tablet) {
+  .HeaderText--large {
+    padding-bottom: 0;
+  }
+  .Grid {
+    flex: 1;
+    flex-wrap: nowrap;
+    @include overflow-scroll;
+    .gridItems {
+      overflow-y: initial;
+      flex-wrap: nowrap;
+      flex-basis: initial;
+
+      .gridItem {
+        width: 160px !important;
+        height: 160px;
+        flex-shrink: 0;
+        margin-right: $spacing-small;
+      }
+    }
+  }
   .SubContainer__content {
     button {
       margin: 0 auto;
@@ -1508,10 +1550,6 @@ select {
         display: block;
       }
     }
-  }
-  .Grid {
-    flex-wrap: wrap;
-    padding-right: $spacing;
   }
   #CuisineSelector {
     display: block;
@@ -1574,6 +1612,22 @@ select {
 
 /* MOBILE */
 @media (max-width: $breakpoint-mobile) {
+  .quickSearch {
+    border-bottom: $border;
+    margin-bottom: $spacing-large;
+    margin-top: $spacing;
+    padding-bottom: $spacing-small;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  .gridItem .gridItem__info {
+    font-weight: $font-weight-bold;
+  }
+  .Section {
+    margin-top: 0;
+    margin-bottom: $spacing-large;
+  }
   .MainContainer, .Nav {
     width: 100%;
     margin-right: 0;
@@ -1602,9 +1656,6 @@ select {
   }
   h1 {
     font-size: $font-size-xlarge;
-  }
-  h2 {
-    font-size: $font-size-large;
   }
   .column-three {
     @include flex-column(2);
@@ -1645,6 +1696,11 @@ select {
     }
   }
   /* Home */
+  .header__logo__container {
+    display: inline-block;
+    padding-top: $spacing-small;
+    margin: 0 auto;
+  }
   .Hero {
     height: 300px;
     .dtp, .search {
@@ -1653,10 +1709,11 @@ select {
     .HeroCopy {
       width: 100%;
       text-align: center;
-      margin-top: 100px !important;
+      margin-top: 70px !important;
 
       .introMessage {
         @include font-size-large;
+        font-size: 2rem;
       }
     }
   }

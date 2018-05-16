@@ -1,26 +1,32 @@
 [ 
   {
-    "name": "Sushi",
-    "image": ""
+    "name": "Prime Rib",
+    "mentions": 10937,
+    "image": "/img/dishes/prime-rib.jpg"
   },
   {
-    "name": "Burgers",
-    "image": ""
+    "name": "Calamari",
+    "mentions": 7092,
+    "image": "/img/dishes/calamari.jpg"
   },
   {
-    "name": "Caviar",
-    "image": ""
+    "name": "Fried Chicken",
+    "mentions": 3919,
+    "image": "/img/dishes/fried-chicken.jpg"
   },
   {
-    "name": "Clam Chowda",
-    "image": ""
+    "name": "Gnocchi",
+    "mentions": 3781,
+    "image": "/img/dishes/gnocchi.jpg"
   },
   {
-    "name": "Apple",
-    "image": ""
+    "name": "Paella",
+    "mentions": 3374,
+    "image": "/img/dishes/paella.jpg"
   },
   {
-    "name": "Candy",
-    "image": ""
+    "name": "Bread pudding",
+    "mentions": 2237,
+    "image": "/img/dishes/bread-pudding.jpg"
   }
 ]

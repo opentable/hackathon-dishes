@@ -23,7 +23,7 @@ export class Header extends Component {
 	render() {
 		return (
 			<div className="header">
-				<div style={{display:"flex"}}>
+				<div className="header__logo__container" style={{display:"flex"}}>
 					<Link to={'/'} className="header__logo"><img src={ this.logo } alt="ot-logo" /></Link>
 					{ this.locationPicker }
 				</div>
