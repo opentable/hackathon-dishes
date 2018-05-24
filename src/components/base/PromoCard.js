@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import { SummaryRating } from '../rpp/SummaryRating';
-import { FlexContainer } from './FlexContainer';
-import { Button } from './Button';
-import { LabelWithIcon } from './LabelWithIcon';
 
 export class PromoCard extends Component {
 	handleClick(url) {
-		window.open(url);
+		window.open('./general-page',"_self");
 	}
 	render() {
 		return (

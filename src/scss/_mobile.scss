@@ -1,0 +1,219 @@
+
+/* UP TO TABLET */
+@media (max-width: $breakpoint-tablet) {
+  .HeaderText--large {
+    padding-bottom: 0;
+  }
+  .flex-scroll {
+    overflow-x: scroll;
+  }
+  .Grid {
+    flex: 1;
+    flex-wrap: nowrap;
+    @include overflow-scroll;
+    .gridItems {
+      overflow-y: initial;
+      flex-wrap: nowrap;
+      flex-basis: initial;
+
+      .gridItem {
+        width: 160px !important;
+        height: 160px;
+        flex-shrink: 0;
+        margin-right: $spacing-small;
+      }
+    }
+  }
+  .SubContainer__content {
+    button {
+      margin: 0 auto;
+    }
+    .TimeslotSection {
+      text-align: center;
+    }
+  }
+  .SubContainer--centered.expanded {
+    .sticky {
+      background: white;
+      top: 0;
+      bottom: auto;
+      .dtp-selection, button, .LabelGroup {
+        display: block;
+      }
+      .SubContainer__content {
+        display: block;
+      }
+    }
+  }
+  #CuisineSelector {
+    display: block;
+    .HeaderText--large {
+      margin-bottom: 0;
+    }
+    .RestRow__mainContent {
+      padding-bottom: 0;
+    }
+    #restRows {
+      width: 100%;
+      .RestRow__img {
+        margin-right: $spacing;
+        box-sizing: border-box;
+        flex-shrink: 0;
+        flex-basis: 100px;
+        overflow: hidden;
+        img {
+          height: 100px;
+          width: auto;
+          margin-left: -50px;
+        }
+      }
+      .RestRow__buttons {
+        display: none;
+      }
+    }
+    #selector {
+      width: 100%;
+      @include overflow-scroll;
+
+      .TabContainer {
+        display: inline-block;
+        margin-right: $spacing;
+
+        .Tab {
+          @include font-size-small;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+  .flex-container .dtp-select {
+    @include flex-column(3);
+  }
+  .MainContainer {
+    margin-right: 0;
+  }
+  .HeroImage {
+    height: $hero-image-height-tablet;
+  }
+  .SubContainer__content {
+    .column-three {
+      @include flex-column(5);
+    }
+  }
+}
+
+/* MOBILE */
+@media (max-width: $breakpoint-mobile) {
+  .arrow-right {
+    display: none;
+  }
+  .quickSearch {
+    border-bottom: $border;
+    margin-bottom: $spacing-large;
+    margin-top: $spacing;
+    padding-bottom: $spacing-small;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  .gridItem .gridItem__info {
+    font-weight: $font-weight-bold;
+  }
+  .container:first-child {
+    margin-top: $spacing-large;
+  }
+  .Section {
+    margin-top: 0;
+    margin-bottom: $spacing-large;
+  }
+  .MainContainer, .Nav {
+    width: 100%;
+    margin-right: 0;
+    .label-group {
+      margin-top: $spacing;
+    }
+  }
+  .SubContainer__content {
+    .column-three {
+      @include flex-column(3);
+    }
+  }
+  .header {
+    height: 50px;
+    padding: $spacing-small;
+
+    .location-picker {
+      display: none;
+    }
+    .buttons {
+      display: none;
+    }
+  }
+  .HeroImage {
+    height: $hero-image-height-mobile;
+  }
+  h1 {
+    font-size: $font-size-xlarge;
+  }
+  .column-three {
+    @include flex-column(2);
+  }
+  .column-two {
+    @include flex-column(1);
+  }
+  .header {
+    text-align: center;
+  }
+  .RestaurantDetails {
+    .column-two {
+      flex-basis: 100%;
+      padding-bottom: 0;
+    }
+    .LabelWithIcon {
+      display: block;
+    }
+  }
+  .column--MapPreview {
+    margin-top: $spacing;
+    overflow: hidden;
+  }
+  .MapPreview {
+    width: 100%;
+    position: relative;
+  }
+  .flex-container {
+    -webkit-overflow-scrolling: touch;
+  }
+  .RestaurantDetails .flex-container {
+    flex-wrap: wrap;
+  }
+  .SubContainer--centered .sticky {
+    .SubContainer__heading__text, .SubContainer__content>.container {
+      width: 100%;
+    }
+  }
+  /* Home */
+  .header__logo__container {
+    display: inline-block;
+    padding-top: $spacing-small;
+    margin: 0 auto;
+  }
+  .Hero {
+    height: 300px;
+    .dtp, .search {
+      display: none !important;
+    }
+    .HeroCopy {
+      width: 100%;
+      text-align: center;
+      margin-top: 70px !important;
+
+      .introMessage {
+        @include font-size-large;
+        font-size: 2rem;
+      }
+    }
+  }
+}

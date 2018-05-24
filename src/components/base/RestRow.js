@@ -5,7 +5,8 @@ import { Button } from './Button';
 
 export class RestRow extends Component {
 	handleClick(id) {
-		window.open(`http://www.opentable.com/restaurant/profile/${id}`);
+		// window.open(`http://www.opentable.com/restaurant/profile/${id}`);
+		window.open('./general-page',"_self");
 	}
 	render() {
 		let tags = "Special occasion, Good for a date, Romantic"

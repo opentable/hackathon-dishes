@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Tag } from '../base/Tag';
+import { Container } from '../base/Container';
 
 export class QuickSearch extends Component {
-	handleClick(url) {
-		window.open(url);
+	handleClick() {
+		window.open('./general-page',"_self");
 	}
 	render() {
 		let quickSearch = [
@@ -27,13 +28,13 @@ export class QuickSearch extends Component {
 			name: "Good for groups",
 			url: 'https://www.opentable.com/promo.aspx?m=4&pid=64'
 		}];
-		quickSearch = quickSearch.map((tag)=><Tag tagName={tag.name} />);
+		quickSearch = quickSearch.map((tag)=><Tag tagName={tag.name} onClick={this.handleClick} />);
 
 		return (
-			<div className="quickSearch">
+			<Container className="quickSearch">
 				<span className="quickSearch--label">Quick search: </span>
 				{ quickSearch }
-			</div>
+			</Container>
 		);
 	}
 }

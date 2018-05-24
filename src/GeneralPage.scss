@@ -1,0 +1,15 @@
+@import './scss/settings';
+@import './scss/fontvariations';
+
+.GeneralPage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+}
+.GeneralPage__text {
+	width: 440px;
+	padding: $spacing-large;
+	border: 2px solid blue;
+	box-shadow: $box-shadow;
+}

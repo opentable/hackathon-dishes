@@ -6,7 +6,8 @@ import { LabelWithIcon } from './LabelWithIcon';
 
 export class RestCard extends Component {
 	handleClick(id) {
-		window.open(`http://www.opentable.com/restaurant/profile/${id}`);
+		// window.open(`http://www.opentable.com/restaurant/profile/${id}`);
+		window.open('./general-page',"_self");
 	}
 	getRandomInt(min, max) {
 	    return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -27,9 +28,9 @@ export class RestCard extends Component {
 				<div className="RestCard__content">
 					<div className="RestCard__name">{this.props.name}</div>
 					<div>
-						<div style={{marginBottom:"2px"}}><SummaryRating rating={this.props.rating} /></div>
+						<div style={{marginBottom:"2px"}}><SummaryRating rating={this.props.rating} ratingCount={this.props.ratingCount} /></div>
 						<div className="RestCard__metadata">
-							{this.props.cuisine} &nbsp;•&nbsp; {this.props.price} &nbsp;•&nbsp; {this.props.location}
+							{this.props.cuisine}&nbsp;•&nbsp;{this.props.price}&nbsp;•&nbsp;{this.props.location}
 						</div>
 						<LabelWithIcon text={`Booked ${bookedTimes} times today`} img="img/ic_social_proof.svg" />
 					</div>

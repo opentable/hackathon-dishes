@@ -75,7 +75,6 @@ p {
   &.flex-scroll {
     justify-content: space-between;
     flex-wrap: nowrap;
-    overflow-x: scroll;
   }
 }
 
@@ -236,12 +235,33 @@ h2.tagline {
   padding: 0 $spacing;
 }
 
+.arrow-right {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: $border;
+  border-radius: 50%;
+  box-shadow: $box-shadow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $color-primary;
+    box-shadow: 0 0 0 1px #DA3743, $box-shadow;
+  }
+}
+
 .summary-rating {
   @include font-size-xsmall;
   font-weight: $font-weight-medium;
   display: inline-block;
   position: relative;
   top: 3px;
+  .summary-rating--text {
+    position: relative;
+    top: 1px;
+  }
 }
 
 .specific-rating {
@@ -467,6 +487,13 @@ h2.tagline {
 .Section {
   margin-top: $spacing-xlarge;
   margin-bottom: $spacing-xlarge * 2;
+  position: relative;
+
+  .arrow-right {
+    position: absolute;
+    right: -18px;
+    top: 160px;
+  }
 }
 
 .CuisineSection .HeaderText--large {
@@ -848,7 +875,7 @@ button {
   text-align: left;
   position: relative;
   margin-top: -$spacing-xsmall;
-  transition: all .3s;
+  transition: transform .3s;
 
   .ic_bookmark {
     position: absolute;
@@ -862,10 +889,29 @@ button {
       background: url("img/ic_bookmark-filled.svg");
     }
   }
+    &:hover {
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    transform: translate(0, -4px);
+
+    .Card__img img {
+      transform: scale(1.05);
+    }
+  }
+
+  .Card__img {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      transition: transform .2s;
+    }
+  }
 
   &:hover {
     box-shadow: $box-shadow;
-    transform: translate(0, -$spacing-xsmall);
+    transform: translate(0, -6px);
     border-radius: $border-radius-small;
     cursor: pointer;
     padding-left: $spacing;
@@ -875,6 +921,9 @@ button {
 
     .RestRow__subContent { 
       height: 42px;
+    }
+    .RestRow__mainContent {
+      border-bottom: none;
     }
   }
 }
@@ -947,7 +996,7 @@ button {
   overflow: hidden;
   width: 90px;
   display: inline-block;
-  margin-right: $spacing-small;
+  margin-right: $spacing-xsmall;
 }
 
 .StarRating__fullStars {
@@ -1270,7 +1319,7 @@ select {
     .TabGroup .Tab {
       padding: 0;
       box-shadow: none;
-      font-size: $font-size-large;
+      font-size: $font-size-medium;
       font-weight: $font-weight-bold;
       border-radius: 0;
       margin-bottom: $spacing-small;
@@ -1329,6 +1378,8 @@ select {
   display: inline-block;
   transition: all .3s;
   border: $border;
+  flex: 0 0 auto;
+  margin-right: $spacing;
 
   &:hover {
     box-shadow: $box-shadow;
@@ -1363,11 +1414,50 @@ select {
   }
 }
 
+.Offers .arrow-right {
+  top: 85px;
+}
+
+.OfferCard {
+  @extend .Card;
+  width: 318px;
+  padding: $spacing;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  // background: linear-gradient(90deg, $color-primary 0%, $color-primary 11%, white 11%, white 100%);
+  // background: linear-gradient(108deg, $color-bg 0%, $color-bg 16%, white 16%, white 100%);
+  .Card__info {
+    flex-grow: 1;
+  }
+  .Card__name {
+    font-weight: $font-weight-medium;
+    height: 46px;
+    overflow: hidden;
+    margin-bottom: $spacing;
+  }
+  .Card__restName {
+    @include font-size-xsmall;
+    font-weight: $font-weight-medium;
+    color: $color-gray-primary;
+  }
+  .Card__icon {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+    margin-right: $spacing;
+    margin-top: $spacing-xsmall;
+
+    img {
+      width: 24px;
+    }
+  }
+}
+
 .PromoCard {
   @extend .Card;
   width: 318px;
-  flex: 0 0 auto;
-  margin-right: $spacing;
 
   .Card__img {
     height: 177px;
@@ -1411,8 +1501,6 @@ select {
 .RestCard {
   @extend .Card;
   width: $card-width;
-  flex: 0 0 auto;
-  margin-right: $spacing;
 
   .Card__img {
     height: 132px;
@@ -1422,6 +1510,7 @@ select {
     display: flex;
     justify-content: space-between;
     margin-top: $spacing-small;
+    padding-bottom: $spacing;
   }
 
   .RestCard__content {
@@ -1430,7 +1519,10 @@ select {
 
     .RestCard__name {
       font-weight: $font-weight-bold;
-      font-size: $font-size-small;
+      font-size: $font-size-medium;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
     .RestCard__metadata {
       white-space: nowrap;
@@ -1452,12 +1544,10 @@ select {
 }
 
 .gridItem {
-  background-color: $color-bg;
   width: 100%;
   margin-bottom: $spacing;
-  cursor: pointer;
-  background-size: cover;
   position: relative;
+  overflow: hidden;
 
   .gridItem__info {
     position: absolute;
@@ -1469,7 +1559,7 @@ select {
     text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
   }
 
-  .gridItem__overlay {
+  .gridItem__overlay, .gridItem__bg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1478,8 +1568,16 @@ select {
     background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.6) 15%,rgba(0,0,0,0) 60%);
   }
 
+  .gridItem__bg {
+    background-size: cover;
+    transition: all .4s;
+  }
+
   &:hover {
-    background-color: darken($color-bg, 10%);
+    cursor: pointer;
+    .gridItem__bg {
+      transform: scale(1.03);
+    }
   }
 }
 
@@ -1508,214 +1606,70 @@ select {
   }
 }
 
-/* UP TO TABLET */
-@media (max-width: $breakpoint-tablet) {
-  .HeaderText--large {
-    padding-bottom: 0;
-  }
-  .Grid {
-    flex: 1;
-    flex-wrap: nowrap;
-    @include overflow-scroll;
-    .gridItems {
-      overflow-y: initial;
-      flex-wrap: nowrap;
-      flex-basis: initial;
-
-      .gridItem {
-        width: 160px !important;
-        height: 160px;
-        flex-shrink: 0;
-        margin-right: $spacing-small;
-      }
-    }
-  }
-  .SubContainer__content {
-    button {
-      margin: 0 auto;
-    }
-    .TimeslotSection {
-      text-align: center;
-    }
-  }
-  .SubContainer--centered.expanded {
-    .sticky {
-      background: white;
-      top: 0;
-      bottom: auto;
-      .dtp-selection, button, .LabelGroup {
-        display: block;
-      }
-      .SubContainer__content {
-        display: block;
-      }
-    }
-  }
-  #CuisineSelector {
-    display: block;
-    .HeaderText--large {
-      margin-bottom: 0;
-    }
-    .RestRow__mainContent {
-      padding-bottom: 0;
-    }
-    #restRows {
-      width: 100%;
-      .RestRow__img {
-        margin-right: $spacing;
-        box-sizing: border-box;
-        flex-shrink: 0;
-        flex-basis: 100px;
-        overflow: hidden;
-        img {
-          height: 100px;
-          width: auto;
-          margin-left: -50px;
-        }
-      }
-      .RestRow__buttons {
-        display: none;
-      }
-    }
-    #selector {
-      width: 100%;
-      @include overflow-scroll;
-
-      .TabContainer {
-        display: inline-block;
-        margin-right: $spacing;
-
-        .Tab {
-          @include font-size-small;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
-  .flex-container .dtp-select {
-    @include flex-column(3);
-  }
-  .MainContainer {
-    margin-right: 0;
-  }
-  .HeroImage {
-    height: $hero-image-height-tablet;
-  }
-  .SubContainer__content {
-    .column-three {
-      @include flex-column(5);
-    }
-  }
-}
-
-/* MOBILE */
-@media (max-width: $breakpoint-mobile) {
-  .quickSearch {
-    border-bottom: $border;
-    margin-bottom: $spacing-large;
-    margin-top: $spacing;
-    padding-bottom: $spacing-small;
-  }
-  h2 {
-    font-size: 1.3rem;
-  }
-  .gridItem .gridItem__info {
-    font-weight: $font-weight-bold;
-  }
-  .Section {
-    margin-top: 0;
-    margin-bottom: $spacing-large;
-  }
-  .MainContainer, .Nav {
-    width: 100%;
-    margin-right: 0;
-    .label-group {
-      margin-top: $spacing;
-    }
-  }
-  .SubContainer__content {
-    .column-three {
-      @include flex-column(3);
-    }
-  }
-  .header {
-    height: 50px;
-    padding: $spacing-small;
-
-    .location-picker {
-      display: none;
-    }
-    .buttons {
-      display: none;
-    }
-  }
-  .HeroImage {
-    height: $hero-image-height-mobile;
-  }
-  h1 {
-    font-size: $font-size-xlarge;
-  }
-  .column-three {
-    @include flex-column(2);
-  }
-  .column-two {
-    @include flex-column(1);
-  }
-  .header {
-    text-align: center;
-  }
-  .RestaurantDetails {
-    .column-two {
-      flex-basis: 100%;
-      padding-bottom: 0;
-    }
-    .LabelWithIcon {
-      display: block;
-    }
-  }
-  .column--MapPreview {
-    margin-top: $spacing;
-    overflow: hidden;
-  }
-  .MapPreview {
-    width: 100%;
-    position: relative;
-  }
+.AppCrossSell {
+  background-color: $color-primary;
+  margin-top: 100px;
   .flex-container {
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-  }
-  .RestaurantDetails .flex-container {
-    flex-wrap: wrap;
-  }
-  .SubContainer--centered .sticky {
-    .SubContainer__heading__text, .SubContainer__content>.container {
-      width: 100%;
-    }
-  }
-  /* Home */
-  .header__logo__container {
-    display: inline-block;
-    padding-top: $spacing-small;
+    max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    overflow: initial;
+    justify-content: flex-end;
   }
-  .Hero {
-    height: 300px;
-    .dtp, .search {
-      display: none;
-    }
-    .HeroCopy {
+  .AppCrossSell__image {
+    width: 348px;
+    height: 264px;
+    margin-top: -64px;
+    overflow: hidden;
+    margin-right: auto;
+    flex-shrink: 2;
+    img {
       width: 100%;
-      text-align: center;
-      margin-top: 70px !important;
-
-      .introMessage {
-        @include font-size-large;
-        font-size: 2rem;
-      }
     }
   }
+  .AppCrossSell__content {
+    display: inline-block;
+    @include text-large-bold;
+    color: white;
+    width: 340px;
+    margin-top: $spacing-xlarge;
 
+    .AppCrossSell__message {
+      margin-bottom: $spacing-large;
+    }
+
+    .appDl__image {
+      height: 40px;
+      margin-right: $spacing;
+    }
+  }
 }
+
+.ValueProp {
+  text-align: center;
+  background-color: $color-bg;
+  padding: $spacing-xlarge $spacing 3rem;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .ValueProp__title {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: $font-weight-bold;
+    max-width: 600px;
+    margin: 0 auto $spacing-large;
+  }
+  .ValueProp__description {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto $spacing-xlarge;
+  }
+}
+
+.ppc {
+  .ic_bookmark {
+    display: none;
+  }
+}
+
+@import './scss/mobile';

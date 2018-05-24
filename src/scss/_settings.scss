@@ -13,21 +13,21 @@ $font-weight-bold: 700;
 
 $font-size-xsmall: 0.875rem;     //14px
 $font-size-small: 1rem;          //16px
-$font-size-medium: 1.25rem;      //18px
+$font-size-medium: 1.125rem;      //18px
 $font-size-large: 1.5rem;        //24x
 $font-size-xlarge: 3rem;         //48px
 
-$color-gray-primary: #333;
-$color-gray-secondary: #717171;
+$color-gray-primary: #2D333F;
+$color-gray-secondary: #6F737B;
 $color-gray-light: #979797;
 $color-primary: #DA3743;
-$color-utility: #E1E1E1;
+$color-utility: #D8D9DB;
 $color-bg: #F1F2F4;
 
 $card-width: 234px;
 $tile-height: 180px;
 
-$box-shadow: 0 2px 8px 2px rgba(51, 51, 51, 0.15);
+$box-shadow: 0 2px 8px 2px rgba(45, 51, 63, 0.15);
 $border: 1px solid $color-utility;
 
 $border-radius-small: 4px;
@@ -122,6 +122,11 @@ $hero-image-height-mobile: 210px;
   font-weight: $font-weight-medium;
 }
 
+@mixin text-large-bold {
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+}
+
 @mixin icon-next-to-text {
 	display: inline-block;
   margin-right: $spacing;
@@ -134,7 +139,7 @@ $hero-image-height-mobile: 210px;
 }
 
 @mixin overflow-scroll {
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
 }

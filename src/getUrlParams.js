@@ -15,4 +15,7 @@ document.body.className += hero;
 let dtp = params.dtp ? ` dtp${params.dtp}` : "";
 document.body.className += dtp;
 
+let ppc = params.type === "ppc" ? ` ppc` : "";
+document.body.className += ppc;
+
 export { params };

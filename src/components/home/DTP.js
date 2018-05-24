@@ -10,7 +10,8 @@ import ic_person from '../../img/ic_person.svg';
 
 export class DTP extends Component {
 	handleClick() {
-		window.open('https://www.opentable.com/s/?covers=2&dateTime=2018-05-17%2018%3A30&latitude=37.7915&longitude=-122.4089&enableSimpleCuisines=true&pageType=0');
+		window.open('./general-page',"_self");
+		// window.open('https://www.opentable.com/s/?covers=2&dateTime=2018-05-17%2018%3A30&latitude=37.7915&longitude=-122.4089&enableSimpleCuisines=true&pageType=0');
 	}
 	render() {
 		let partySizeOptions = [2,3,4,5,6,7,8].map((val) => <option value={val}>{val} people</option>);
@@ -44,7 +45,7 @@ export class DTP extends Component {
 							</div>
 						</FlexContainer>
 						<Search />
-						<Button text="Let's go" />
+						<Button text="Let's go" onClick={this.handleClick} />
 					</FlexContainer>
 				</div>
 			</div>

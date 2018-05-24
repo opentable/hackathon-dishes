@@ -8,28 +8,34 @@ import backgroundImage2 from '../../img/hero2.jpg';
 import backgroundImage3 from '../../img/hero3.jpg';
 import backgroundImage4 from '../../img/hero4.jpg';
 import backgroundImage5 from '../../img/hero5.jpg';
+import london from '../../img/london2.jpeg';
 import { DTP } from './DTP';
 import { Header } from '../Header';
 import $ from 'jquery';
 
 export class Hero extends Component {
 	componentDidMount() {
-		$("#slideshow > div:gt(0)").hide();
+		if (document.getElementById("slideshow").childElementCount > 1){
+			$("#slideshow > div:gt(0)").hide();
 
-		setInterval(function() { 
-		  $('#slideshow > div:first')
-		    .fadeOut(1500)
-		    .next()
-		    .fadeIn(1500)
-		    .end()
-		    .appendTo('#slideshow');
-		},  4000);
+			setInterval(function() { 
+			  $('#slideshow > div:first')
+			    .fadeOut(1500)
+			    .next()
+			    .fadeIn(1500)
+			    .end()
+			    .appendTo('#slideshow');
+			},  4000);
+		}
 	}
 	render() {
-		let location = "San Francisco";
+		let location = this.props.location;
 		let introMessage = "Find your table for any occasion";
 		let bg;
-		if (document.body.classList.contains('herodefault')) {
+		if (this.props.type === "ppc"){
+			bg = [ london ];
+		}
+		else if (document.body.classList.contains('herodefault')) {
 			bg = [ imgDefault1, imgDefault2, imgDefault3, imgDefault4 ];
 		} else {
 			bg = [ backgroundImage1, backgroundImage2, backgroundImage3, backgroundImage4, backgroundImage5 ];

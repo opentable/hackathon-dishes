@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { SectionWithHeader } from '../base/SectionWithHeader';
 import { RestRow } from '../base/RestRow';
 import { TabGroup } from '../base/TabGroup';
+import { Container } from '../base/Container';
 
 export class CuisineSelector extends Component {
 	constructor(props) {
@@ -15,8 +16,8 @@ export class CuisineSelector extends Component {
 		if (this.state.cuisine != cuisine) {
 			this.setState({ cuisine: cuisine });
 		}
-		if (window.pageYOffset >= this.restRows.offsetTop) {
-			window.scroll(0, this.restRows.offsetTop);
+		if (this.restRows.getBoundingClientRect().top <= 0) {
+			this.restRows.scrollIntoView();
 		}
 	}
 	componentDidMount() {
@@ -29,13 +30,13 @@ export class CuisineSelector extends Component {
 		this.selector = document.getElementById("selector");
 		this.selectorNav = document.getElementById("selector-nav");
 		this.cuisineSelector = document.getElementById("CuisineSelector");
-		this.stickyStart = this.selector.offsetTop;
+		this.stickyStart = this.selector.getBoundingClientRect().top;
 		this.stickyEnd = this.stickyStart + this.cuisineSelector.offsetHeight - this.selectorNav.offsetHeight;
 
-		if (window.pageYOffset >= this.stickyEnd) {
+		if (this.stickyEnd <= 0) {
 			this.selectorNav.classList.remove("selector-sticky");
 			this.selectorNav.classList.add("selector-past");
-		} else if (window.pageYOffset >= this.stickyStart) {
+		} else if (this.stickyStart <= 0) {
 			this.selectorNav.classList.add("selector-sticky");
 			this.selectorNav.classList.remove("selector-past");
 		}
@@ -53,18 +54,20 @@ export class CuisineSelector extends Component {
 		});
 		let selector = <TabGroup tabs={this.props.cuisines} onClick={this.handleClick} selected={this.state.cuisine} />;
 		return (
-			<SectionWithHeader headerText="Top cuisines in San Francisco" className="CuisineSection">
-				<div id='CuisineSelector'>
-					<div id="selector">
-						<div id="selector-nav">
-							{ selector }
+			<Container>
+				<SectionWithHeader headerText={this.props.headerText} className="CuisineSection">
+					<div id='CuisineSelector'>
+						<div id="selector">
+							<div id="selector-nav">
+								{ selector }
+							</div>
+						</div>
+						<div id="restRows">
+							{ restRows }
 						</div>
 					</div>
-					<div id="restRows">
-						{ restRows }
-					</div>
-				</div>
-			</SectionWithHeader>
+				</SectionWithHeader>
+			</Container>
 		);
 	}
 }
