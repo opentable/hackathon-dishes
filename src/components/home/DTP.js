@@ -16,7 +16,7 @@ export class DTP extends Component {
 	render() {
 		let partySizeOptions = [2,3,4,5,6,7,8].map((val) => <option value={val}>{val} people</option>);
 		let timeOptions = ["6:00pm","6:30pm","7:00pm","7:30pm","8:00pm","8:30pm"].map((val) => <option value={val}>{val}</option>);
-		let dateOptions = ["May 10", "May 11", "May 12", "May 13", "May 14", "May 15", "May 16" ].map((val) => <option value={val}>{val}</option>);
+		let dateOptions = ["May 10, 2018", "May 11, 2018", "May 12, 2018", "May 13, 2018", "May 14, 2018", "May 15, 2018", "May 16, 2018" ].map((val) => <option value={val}>{val}</option>);
 		let quickSearch = ["Dinner tonight", "Date night", "Brunch"]
 		quickSearch = quickSearch.map((tag)=><Tag tagName={tag} />);
 

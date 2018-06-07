@@ -875,7 +875,7 @@ button {
   text-align: left;
   position: relative;
   margin-top: -$spacing-xsmall;
-  transition: transform .3s;
+  transition: all .3s;
 
   .ic_bookmark {
     position: absolute;
@@ -887,15 +887,6 @@ button {
 
     &:hover {
       background: url("img/ic_bookmark-filled.svg");
-    }
-  }
-    &:hover {
-    box-shadow: $box-shadow;
-    cursor: pointer;
-    transform: translate(0, -4px);
-
-    .Card__img img {
-      transform: scale(1.05);
     }
   }
 
@@ -911,7 +902,6 @@ button {
 
   &:hover {
     box-shadow: $box-shadow;
-    transform: translate(0, -6px);
     border-radius: $border-radius-small;
     cursor: pointer;
     padding-left: $spacing;
@@ -1115,6 +1105,13 @@ button {
   margin-bottom: $spacing-large;
 }
 
+.bgVideo {
+  width: 100%;
+  margin-top: -10%;
+}
+.bgStyle__video {
+  background-color: black !important;
+}
 .bgImage {    
   width: 100%;
   height: 100%;
@@ -1125,7 +1122,7 @@ button {
   top: 0;
   left: 0;
   &.overlay {
-    opacity: 0.65;
+    opacity: 0.55;
     z-index: 1;
   }
   &.overlay-lighter {
@@ -1290,6 +1287,7 @@ select {
     position: relative; 
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 #slideshow > div { 
@@ -1389,6 +1387,9 @@ select {
     .Card__img img {
       transform: scale(1.05);
     }
+    .Card__CTA:after {
+      content: url("img/ic_right_red.svg");
+    }
   }
 
   .Card__img {
@@ -1404,12 +1405,12 @@ select {
   .Card__CTA {
     font-weight: $font-weight-medium;
     margin-bottom: $spacing-small;
+    position: relative;
     &:after {
       cursor: pointer;
-      content: url("img/ic_advance.svg");
-      position: relative;
-      top: $spacing-small;
-      margin-left: $spacing-xsmall;
+      content: url("img/ic_right.svg");
+      position: absolute;
+      top: 2px;
     }
   }
 }

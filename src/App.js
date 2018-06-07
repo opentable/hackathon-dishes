@@ -24,39 +24,17 @@ class App extends Component {
 	var signedIn = params.type === "signedIn" ? true : false;
 	var content;
 
-	/* PPC */
-	if (params.type === "ppc"){
-		location = "London";
-		content = (
-			<div>
-				<RestCarousel restaurants={restaurants.slice(0,4)} headerText={`Earn free meals with ${location} bonus point tables`} buttons={["Now","Lunch","Dinner"]} />
-				<Offers headerText={`Offers at top restaurants in ${location}`} offers={offers.slice(0,3)} />
-				<ValueProp />
-				<CuisineSelector headerText={`Top cuisines in ${location}`} restaurants={restaurants} cuisines={cuisines} />
-				<AppCrossSell />
-			</div>
-		);
-	} 
-	/* NOT PPC */
-	else {
-		content = (
-			<div>
-				<QuickSearch />
-				<RestCarousel restaurants={restaurants.slice(0,4)} headerText={signedIn ? "Recommended for you" : `Popular in ${location}`} buttons={["Now","Lunch","Dinner"]} />
-				{ signedIn ? <RestCarousel restaurants={restaurants.slice(10,14)} headerText="Dine again" buttons={["Now","Lunch","Dinner"]} /> : null }
-				{ !signedIn ? <ValueProp /> : null }
-				<CuisineSelector headerText={`Top cuisines in ${location}`} restaurants={restaurants} cuisines={cuisines} />
-				{!signedIn ? <GridSection gridItems={dishes} headerText={`Best things to eat in ${location}`} /> : null }
-				<PromoSection promos={promos} headerText={`Upcoming in ${location}`} />
-				<AppCrossSell />
-			</div>
-		);
-	}
 	return (
       <div className="App">
 		<Hero location={location} type={params.type} />
-		{ content }
-		{/*	<RestCarousel restaurants={restaurants.slice(15,19)} headerText="Date night in San Francisco" buttons={["6:00pm","7:00pm","7:30pm"]} /> */}
+		<QuickSearch />
+		<RestCarousel restaurants={restaurants.slice(0,4)} headerText={signedIn ? "Recommended for you" : `Popular in ${location}`} buttons={["Now","Lunch","Dinner"]} />
+		{ signedIn ? <RestCarousel restaurants={restaurants.slice(10,14)} headerText="Dine again" buttons={["Now","Lunch","Dinner"]} /> : null }
+		{ !signedIn ? <ValueProp /> : null }
+		<CuisineSelector headerText={`Top cuisines in ${location}`} restaurants={restaurants} cuisines={cuisines} />
+		{!signedIn ? <GridSection gridItems={dishes} headerText={`Best things to eat in ${location}`} /> : null }
+		<PromoSection promos={promos} headerText={`Upcoming in ${location}`} />
+		<AppCrossSell />
       </div>
     );
   }
