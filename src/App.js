@@ -35,6 +35,7 @@ class App extends Component {
 		{!signedIn ? <GridSection gridItems={dishes} headerText={`Best things to eat in ${location}`} /> : null }
 		<PromoSection promos={promos} headerText={`Upcoming in ${location}`} />
 		<AppCrossSell />
+		{/*	<RestCarousel restaurants={restaurants.slice(15,19)} headerText="Date night in San Francisco" buttons={["6:00pm","7:00pm","7:30pm"]} /> */}
       </div>
     );
   }
